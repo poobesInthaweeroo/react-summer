@@ -6,7 +6,7 @@ export default function Sidebar() {
   // Close sidebar when route changes (mobile)
   useEffect(() => {
     setOpen(false);
-  }, [window.location.pathname]);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';

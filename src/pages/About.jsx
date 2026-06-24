@@ -26,7 +26,7 @@ function useScrollReveal(ref) {
     }, { threshold: 0.1 });
     els.forEach(el => obs.observe(el));
     return () => obs.disconnect();
-  }, []);
+  }, [ref]);
 }
 
 function useCounters(ref) {
@@ -70,7 +70,7 @@ function useSkillBars(ref) {
     }, { threshold: 0.4 });
     obs.observe(ref.current);
     return () => obs.disconnect();
-  }, []);
+  }, [ref]);
 }
 
 export default function About() {
@@ -112,7 +112,7 @@ export default function About() {
             ))}
           </div>
 
-          <a href="https://www.ntplc.co.th/home" target="_blank"  className="btn btn-primary" style={{ marginTop: 24 }}>
+          <a href="https://www.ntplc.co.th/home" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ marginTop: 24 }}>
             <i className="fas fa-angle-right" /> โทรคมนาคมแห่งชาติ จำกัด (มหาชน)
           </a>
         </div>
